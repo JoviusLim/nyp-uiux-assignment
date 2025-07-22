@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NYP Photography Club Gallery">
+    <meta name="keywords" content="NYP, Photography, Club, Gallery">
+    <meta name="author" content="Nanyang Polytechnic Photography Club">
+    <title>Gallery | NYP Photography Club</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="NYP Photography Club Logo" class="logo">
+                <span class="brand-text">NYP Photography Club</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <h1 class="text-center mb-5">Our Gallery</h1>
+        
+        <!-- Gallery Filter -->
+        <div class="gallery-filter mb-4">
+            <div class="btn-group" role="group" aria-label="Gallery filter">
+                <button type="button" class="btn btn-outline-gold active" data-filter="all">All</button>
+                <button type="button" class="btn btn-outline-gold" data-filter="landscape">Landscape</button>
+                <button type="button" class="btn btn-outline-gold" data-filter="portrait">Portrait</button>
+                <button type="button" class="btn btn-outline-gold" data-filter="street">Street</button>
+            </div>
+        </div>
+
+        <!-- Photo Grid -->
+        <div class="row g-4 gallery-grid">
+            <!-- Landscape Photos -->
+            <div class="col-sm-6 col-lg-4 gallery-item" data-category="landscape">
+                <div class="gallery-card">
+                    <img src="assets/images/gallery/landscape-1.jpg" class="img-fluid" alt="The Skyline of Singapore" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="assets/images/gallery/landscape-1.jpg" data-title="Singapore Skyline" data-description="A stunning view of Singapore's iconic skyline at sunset">
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 gallery-item" data-category="landscape">
+                <div class="gallery-card">
+                    <img src="assets/images/gallery/landscape-2.jpg" class="img-fluid" alt="Marina Bay Sands Hotel and Mall" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="assets/images/gallery/landscape-2.jpg" data-title="Marina Bay" data-description="The beautiful Marina Bay area captured during golden hour">
+                </div>
+            </div>
+
+            <!-- Portrait Photos -->
+            <div class="col-sm-6 col-lg-4 gallery-item" data-category="portrait">
+                <div class="gallery-card">
+                    <img src="assets/images/gallery/portrait-1.jpg" class="img-fluid" alt="Student Portrait" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="assets/images/gallery/portrait-1.jpg" data-title="Student Portrait" data-description="A creative portrait session with our club members">
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 gallery-item" data-category="portrait">
+                <div class="gallery-card">
+                    <img src="assets/images/gallery/portrait-2.jpg" class="img-fluid" alt="Studio Portrait" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="assets/images/gallery/portrait-2.jpg" data-title="Studio Portrait" data-description="Professional studio lighting techniques in action">
+                </div>
+            </div>
+
+            <!-- Street Photos -->
+            <div class="col-sm-6 col-lg-4 gallery-item" data-category="street">
+                <div class="gallery-card">
+                    <img src="assets/images/gallery/street-1.jpg" class="img-fluid" alt="City Life" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="assets/images/gallery/street-1.jpg" data-title="City Life" data-description="Capturing the vibrant energy of Singapore's streets">
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 gallery-item" data-category="street">
+                <div class="gallery-card">
+                    <img src="assets/images/gallery/street-2.jpg" class="img-fluid" alt="Urban Moments" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="assets/images/gallery/street-2.jpg" data-title="Urban Moments" data-description="Everyday moments in the urban landscape">
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Modal -->
+        <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="galleryModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" class="img-fluid modal-image" alt="">
+                        <p class="modal-description mt-3"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">NYP Photography Club</h5>
+                    <p class="footer-text">Capturing moments, creating memories, and fostering creativity through the art of photography.</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                    <p class="footer-text mt-3">Email: photography@nyp.edu.sg</p>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright">© 2025 NYP Photography Club. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+</body>
+</html>
