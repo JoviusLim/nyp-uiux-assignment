@@ -829,7 +829,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .registration-summary {
-    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem 1rem 1rem 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.registration-summary h2 {
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.registration-summary ul.list-group {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+.registration-summary .list-group-item {
+    background: transparent;
+    color: var(--white);
+    border: none;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+    font-size: 1.05rem;
+    padding: 0.75rem 0.5rem;
+}
+.registration-summary .list-group-item:last-child {
+    border-bottom: none;
+}
+.registration-summary strong {
+    color: var(--gold);
+    font-weight: 600;
 }
 
 .summary-section {
