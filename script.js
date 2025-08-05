@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (btn.closest('table')) {
         e.preventDefault();
         const eventName = btn.closest('tr').children[1].textContent;
-        document.getElementById('eventName').value = eventName;
+        document.getElementById('eventName').textContent = eventName;
         document.getElementById('registerSuccess').classList.add('d-none');
         const modal = new bootstrap.Modal(document.getElementById('registerModal'));
         modal.show();
@@ -124,9 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById('eventDetailsDate').textContent = card.getAttribute('data-date');
       document.getElementById('eventDetailsModal').classList.remove('d-none');
     });
-  });
-  document.querySelector('.event-details-close').addEventListener('click', function() {
-    document.getElementById('eventDetailsModal').classList.add('d-none');
   });
   document.querySelector('.event-details-backdrop').addEventListener('click', function() {
     document.getElementById('eventDetailsModal').classList.add('d-none');

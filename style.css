@@ -781,6 +781,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
 }
 
+.form-title {
+    color: var(--gold);
+    font-size: 1.5rem;
+}
+
+.form-subtitle {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
 .section-title {
     color: var(--gold);
     margin-bottom: 1.5rem;
@@ -1008,4 +1018,15 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--gold) !important;
   opacity: 0.8;
   font-size: 1rem;
+}
+
+.alert-success {
+    border-color: var(--gold);
+    background-color: inherit;
+    color: var(--white);
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    text-align: left;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }

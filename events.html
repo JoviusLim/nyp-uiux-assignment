@@ -105,16 +105,16 @@
             </div>
             <div class="modal-body">
             <div class="mb-3">
-                <label for="eventName" class="form-label">Event</label>
-                <input type="text" class="form-control" id="eventName" name="eventName" readonly>
+                <h6 class="form-title">Event</h6>
+                <p class="form-subtitle" id="eventName" name="eventName">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 form-floating">
+                <input type="text" class="form-control" id="participantName" name="participantName" placeholder="Your Name" required>
                 <label for="participantName" class="form-label">Your Name</label>
-                <input type="text" class="form-control" id="participantName" name="participantName" required>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 form-floating">
+                <input type="email" class="form-control" id="participantEmail" name="participantEmail" placeholder="Email" required>
                 <label for="participantEmail" class="form-label">Email</label>
-                <input type="email" class="form-control" id="participantEmail" name="participantEmail" required>
             </div>
             <div id="registerSuccess" class="alert alert-success d-none" role="alert">
                 Registration successful!
@@ -122,7 +122,7 @@
             </div>
             <div class="modal-footer">
             <button type="submit" class="btn btn-outline-gold btn-sm">Submit</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline-gold btn-sm" data-bs-dismiss="modal">Close</button>
             </div>
         </form>
         </div>
@@ -193,7 +193,6 @@
     <div id="eventDetailsModal" class="event-details-modal d-none">
   <div class="event-details-backdrop"></div>
   <div class="event-details-card">
-    <button class="event-details-close" aria-label="Close">&times;</button>
     <img id="eventDetailsImg" src="" alt="" class="event-details-img mb-3">
     <h3 id="eventDetailsTitle" class="mb-2"></h3>
     <p id="eventDetailsDesc" class="mb-2"></p>
