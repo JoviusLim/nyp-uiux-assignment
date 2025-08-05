@@ -84,3 +84,55 @@ document.addEventListener("DOMContentLoaded", function () {
     displaySubmittedData();
   }
 });
+
+
+  // Event registration modal logic
+
+  document.querySelectorAll('.btn-outline-gold').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      if (btn.closest('table')) {
+        e.preventDefault();
+        const eventName = btn.closest('tr').children[1].textContent;
+        document.getElementById('eventName').value = eventName;
+        document.getElementById('registerSuccess').classList.add('d-none');
+        const modal = new bootstrap.Modal(document.getElementById('registerModal'));
+        modal.show();
+      }
+    });
+  });
+
+  var eventRegisterForm = document.getElementById('eventRegisterForm');
+  if (eventRegisterForm) {
+    eventRegisterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('registerSuccess').classList.remove('d-none');
+      setTimeout(() => {
+        bootstrap.Modal.getInstance(document.getElementById('registerModal')).hide();
+      }, 1200);
+      this.reset();
+    });
+  }
+
+// Past Events Card Modal Logic
+  document.querySelectorAll('.event-card').forEach(function(card) {
+    card.style.cursor = "pointer";
+    card.addEventListener('click', function() {
+      document.getElementById('eventDetailsImg').src = card.getAttribute('data-img');
+      document.getElementById('eventDetailsImg').alt = card.getAttribute('data-title');
+      document.getElementById('eventDetailsTitle').textContent = card.getAttribute('data-title');
+      document.getElementById('eventDetailsDesc').textContent = card.getAttribute('data-desc');
+      document.getElementById('eventDetailsDate').textContent = card.getAttribute('data-date');
+      document.getElementById('eventDetailsModal').classList.remove('d-none');
+    });
+  });
+  document.querySelector('.event-details-close').addEventListener('click', function() {
+    document.getElementById('eventDetailsModal').classList.add('d-none');
+  });
+  document.querySelector('.event-details-backdrop').addEventListener('click', function() {
+    document.getElementById('eventDetailsModal').classList.add('d-none');
+  });
+  document.addEventListener('keydown', function(e) {
+  if (e.key === "Escape") {
+    document.getElementById('eventDetailsModal').classList.add('d-none');
+  }
+});
