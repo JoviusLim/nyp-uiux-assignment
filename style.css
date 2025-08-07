@@ -1030,3 +1030,75 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
     box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
+
+/* About Me Modal Styles */
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(24, 24, 24, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-modal.show {
+    display: flex;
+}
+
+.custom-modal-content {
+    background: var(--charcoal);
+    color: var(--white);
+    margin: auto;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    text-align: center;
+    position: relative;
+}
+
+.custom-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 2;
+}
+
+.custom-modal-close:hover {
+    color: var(--gold);
+}
+
+.modal-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    margin-bottom: 1rem;
+}
+
+.modal-role {
+    font-weight: bold;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.modal-bio {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-extra {
+    font-size: 0.95rem;
+    color: var(--gray-light);
+}
