@@ -115,7 +115,13 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="team-card">
+                    <div class="team-card"
+                         style="cursor: pointer;"
+                         data-name="Mike Chan"
+                         data-role="Club President"
+                         data-img="assets/images/team-1.jpg"
+                         data-bio="Professional photographer with 5 years of experience in portrait and event photography."
+                         data-extra="Mike leads the club with a vision for inclusivity and creativity. He has organized over 30 events and is passionate about mentoring new members.">
                         <img src="assets/images/team-1.jpg" alt="Club President" class="img-fluid rounded">
                         <div class="team-info">
                             <h3>Mike Chan</h3>
@@ -125,7 +131,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="team-card">
+                    <div class="team-card"
+                         style="cursor: pointer;"
+                         data-name="Sarah Tan"
+                         data-role="Vice President"
+                         data-img="assets/images/team-2.jpg"
+                         data-bio="Specializes in landscape and nature photography with a passion for teaching."
+                         data-extra="Sarah is dedicated to promoting environmental awareness through photography. She conducts workshops on nature photography and has a keen eye for detail.">
                         <img src="assets/images/team-2.jpg" alt="Vice President" class="img-fluid rounded">
                         <div class="team-info">
                             <h3>Sarah Tan</h3>
@@ -135,7 +147,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="team-card">
+                    <div class="team-card"
+                         style="cursor: pointer;"
+                         data-name="Del Mont"
+                         data-role="Events Coordinator"
+                         data-img="assets/images/team-3.jpg"
+                         data-bio="Expert in event photography and workshop organization."
+                         data-extra="Del is responsible for organizing club events and workshops. With a background in event management, Del ensures that every event runs smoothly and is enjoyable for all members.">
                         <img src="assets/images/team-3.jpg" alt="Events Coordinator" class="img-fluid rounded">
                         <div class="team-info">
                             <h3>Del Mont</h3>
@@ -147,6 +165,17 @@
             </div>
         </div>
     </section>
+    
+        <div id="teamModal" class="event-details-modal d-none">
+        <div class="event-details-backdrop"></div>
+        <div class="event-details-card">
+        <img id="teamModalImg" src="" alt="" class="event-details-img mb-3">
+        <h3 id="teamModalName"></h3>
+        <p class="text-muted" id="teamModalRole"></p>
+        <p id="teamModalBio"></p>
+        <div id="teamModalExtra" style="color: white;"></div>
+    </div>
+</div>
 
     <!-- Achievements Section -->
     <section class="achievements-section py-5">

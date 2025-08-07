@@ -133,3 +133,32 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('eventDetailsModal').classList.add('d-none');
   }
 });
+
+// Team Modal Logic
+document.querySelectorAll('.team-card').forEach(function(card) {
+  card.style.cursor = "pointer";
+  card.addEventListener('click', function() {
+    document.getElementById('teamModalImg').src = card.getAttribute('data-img');
+    document.getElementById('teamModalImg').alt = card.getAttribute('data-name');
+    document.getElementById('teamModalName').textContent = card.getAttribute('data-name');
+    document.getElementById('teamModalRole').textContent = card.getAttribute('data-role');
+    document.getElementById('teamModalBio').textContent = card.getAttribute('data-bio');
+    document.getElementById('teamModalExtra').textContent = card.getAttribute('data-extra') || '';
+    document.getElementById('teamModal').classList.remove('d-none');
+  });
+});
+
+document.getElementById('teamModal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.classList.add('d-none');
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === "Escape") {
+    document.getElementById('teamModal').classList.add('d-none');
+  }
+  document.querySelector('.event-details-backdrop').addEventListener('click', function() {
+    document.getElementById('teamModal').classList.add('d-none');
+  });
+});
